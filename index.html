@@ -48,7 +48,21 @@
         .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 100px 20px; overflow: hidden; }
         .hero-content { text-align: center; z-index: 2; max-width: 900px; }
         .hero-profile { position: relative; display: inline-block; margin-bottom: 30px; }
-        .hero-profile-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--crimson); box-shadow: 0 0 30px rgba(220, 20, 60, 0.5), 0 0 60px rgba(220, 20, 60, 0.2); position: relative; z-index: 2; }
+        ..hero-profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: contain;      /* Shows the full logo */
+    object-position: center;
+    background: #ff3131;      /* Same red as your logo */
+    padding: 20px;            /* Space around the logo */
+    border: 3px solid var(--crimson);
+    box-shadow:
+        0 0 30px rgba(220,20,60,.5),
+        0 0 60px rgba(220,20,60,.2);
+    position: relative;
+    z-index: 2;
+}
         .hero-profile-ring { position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border-radius: 50%; border: 2px solid transparent; border-top-color: var(--crimson); border-right-color: var(--neon-red); animation: spin 4s linear infinite; }
         .hero-profile-ring:nth-child(2) { top: -20px; left: -20px; right: -20px; bottom: -20px; border-top-color: var(--dark-red); border-left-color: var(--crimson); animation: spin 6s linear infinite reverse; }
         @keyframes spin { to { transform: rotate(360deg); } }
@@ -264,15 +278,21 @@
     </div>
 
     <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-profile">
-                <div class="hero-profile-ring"></div>
-                <div class="hero-profile-ring"></div>
-                <img src="images/profile.png"
-     alt="Profile"
-     class="hero-profile-img">
-            </div>
+   <section class="hero" id="home">
+    <div class="hero-content">
+
+        <div class="hero-profile">
+            <div class="hero-profile-ring"></div>
+            <div class="hero-profile-ring"></div>
+
+            <img
+                src="images/profile.png"
+                alt="Loomrise Studios Logo"
+                class="hero-profile-img"
+            >
+        </div>
+
+        <!-- Rest of your hero content -->
             <h1 class="hero-name">LOOMRISE STUDIOS</h1>
             <p class="hero-title">Social Media Social Media Management Agency</p>
             <div class="typing-text" id="typing-text"></div>
