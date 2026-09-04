@@ -156,7 +156,30 @@
     .collage-piece { position: absolute; transition: transform 0.5s ease; }
     .collage-piece:hover { transform: scale(1.05) rotate(0deg) !important; }
     .collage-red-block { width: 280px; height: 350px; background: var(--primary-red); top: 10%; right: 10%; transform: rotate(-5deg); z-index: 1; }
-    .collage-img-1 { width: 220px; height: 280px; background: linear-gradient(135deg, #333 0%, #111 100%); top: 5%; right: 25%; transform: rotate(3deg); z-index: 2; overflow: hidden; border: 4px solid var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 3rem; color: rgba(255,255,255,0.1); }
+    .collage-img-1 {
+    width: 220px;
+    height: 280px;
+    background: linear-gradient(135deg, #333 0%, #111 100%);
+    top: 5%;
+    right: 25%;
+    transform: rotate(3deg);
+    z-index: 2;
+    overflow: hidden;
+    border: 4px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: rgba(255,255,255,0.1);
+}
+
+.collage-img-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
     .collage-img-2 { width: 180px; height: 220px; background: linear-gradient(45deg, #222 0%, #444 100%); bottom: 15%; right: 5%; transform: rotate(-8deg); z-index: 3; overflow: hidden; border: 4px solid var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 2.5rem; color: rgba(255,255,255,0.1); }
     .collage-paper { width: 200px; height: 150px; background: var(--off-white); bottom: 5%; right: 30%; transform: rotate(5deg); z-index: 4; padding: 1rem; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
     .collage-paper::before { content: ''; position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px); pointer-events: none; }
@@ -368,7 +391,8 @@
       <div class="hero-collage">
         <div class="collage-piece collage-red-block"></div>
         <div class="collage-piece collage-img-1">
-    <img src="Anish.jpg" alt="Brand">
+    <img src="Anish.jpg" alt="Brand"
+      >
 </div>
         <div class="collage-piece collage-img-2">CREATE</div>
         <div class="collage-piece collage-paper">
